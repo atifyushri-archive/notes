@@ -1,0 +1,89 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage[british]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage{amsmath}
+\usepackage{array}
+\newenvironment{conditions}[1][where:]
+  {#1 \begin{tabular}[t]{>{$}l<{$} @{${}={}$} l}}
+  {\end{tabular}\\[\belowdisplayskip]}
+
+
+\usepackage{multicol}
+% table environment for multicol
+\makeatletter
+\newenvironment{tablehere}{\def\@captype{table}}{}
+\makeatother
+\renewcommand{\arraystretch}{1.25}
+
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt}
+\setlist[enumerate]{noitemsep, topsep=0pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\multicolsep}{0pt}
+
+\begin{document}
+{\LARGE\bfseries Particles and Radiation}
+
+\vspace*{8pt}\hrule\vspace*{8pt}
+
+\begin{multicols*}{2}
+	\tableofcontents
+
+	\section{Electromagnetic Radiation and Quantum Phenomena}
+	\subsection{The Photoelectric Effect}
+	\subsubsection{The Photoelectric Effect}
+	The photoelectric effect is a phenomena where a photon collides with the surface of a material, causing the emission of an electron, called photoelectron.
+	\medskip
+
+	In order for electron emission to occur, a photon must have enough energy compared to the binding energy (minimum energy required to remove an electron) which is unique for every material.
+	\medskip
+
+	Since photons is a form of electromagnetic radiation, a frequency can be attributed to each photon. Energy of a photon can be calculated using the photon energy equation.
+	\begin{equation}
+		E = hf = \dfrac{hc}{\lambda}
+	\end{equation}
+	\begin{conditions}
+		E & photon energy \\
+		h & Planck's constant \\
+		f & wave frequency
+	\end{conditions}
+	The binding energy can be converted into a minimum wave frequency. This frequency is called threshold frequency.
+	\medskip
+
+	Each electron absorbs a photon with frequency greater than threshold frequency in order for the electron to be dislodged from the material.
+	\medskip
+
+	An increase in the intensity of the electromagnetic radiation equates to the more electrons being emitted from the material.
+
+	\subsubsection{Work Function}
+	The work function, designated as $\phi$, us the minimum amount of energy (binding energy) needed to dislodge an electron from the surface of the material (into a vacuum).
+
+	\subsubsection{Stopping Potential}
+	The stopping potential is the potential differences, measured in volts, across the material that would stop electrons electrons with the maximum kinetic energy. The stopping potential is denoted as $V_s$. The maximum kinetic energy of a photoelectron is directly proportional to the stopping potential of a material.
+	\begin{equation}
+		E_{k (max)} = eV_s
+	\end{equation}
+	\subsubsection{The Photoelectric Equation}
+	\begin{equation}
+		hf = \phi + E_{k (max)}
+	\end{equation}
+	The photoelectric equation relates photon energy to the work function and the maximum kinetic energy. The equation shows that energy absorbed by an electron must be higher than work function in order for emission to occur.
+	\begin{equation}
+		E = hf = \phi + E_k
+	\end{equation}
+	This equation is the general form of the photoelectric equation that equates photon energy to the kinetic energy of an emitted photon, meaning $E_k$ can vary up to a maximum kinetic energy $E_{k (max)}$.
+	\paragraph{Alternative Photoelectric Equation}
+	\begin{align}
+		E_{k (max)} & = hf - \phi  \\
+		\phi        & = hf_0       \\ \notag
+		\\
+		E_{k (max)} & = h(f - f_0)
+	\end{align}
+
+	\subsection{Collisions of Electrons With Atoms}
+	\subsubsection{Energy Levels}
+\end{multicols*}
+\end{document}

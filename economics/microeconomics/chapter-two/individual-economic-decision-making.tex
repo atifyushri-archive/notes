@@ -1,0 +1,253 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{multicol}
+\usepackage[T1]{fontenc}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt}
+\setlist[enumerate]{noitemsep, topsep=0pt}
+
+\makeatletter
+\newenvironment{tablehere}
+	{\def\@captype{table}}{}
+\newenvironment{figurehere}
+	{\def\@captype{figure}}{}
+\makeatother
+\renewcommand{\arraystretch}{1.25}
+
+\setlength{\multicolsep}{0pt}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+{
+\LARGE \bfseries Individual Economic Decision Making
+\vspace*{16pt} \hrule \vspace*{16pt}
+}
+\begin{multicols*}{2}
+	\tableofcontents
+
+	\section{Consumer Behaviour}
+	\subsection{Rational Economic Decision}
+	In the neoclassical model of economics, every economic agent is perceived as rational, meaning that every economic choice is made with the aim to maximise the positive consequences, i.e. most optimal choice is picked. This means that all resources are allocated optimally.
+
+	\subsection{Economic Incentives}
+	Economic incentives are rewards or penalties that encourages economic agents to allocate resources optimally. The economic incentives for effective allocation of the factors of productions are:
+
+	\begin{center}
+		\begin{tablehere}
+			\begin{tabular}{|c|c|}
+				\hline
+				Factor of Production & Economic Incentive \\
+				\hline
+				Land                 & Rent               \\
+				Labour               & Wages              \\
+				Capital              & Interest           \\
+				Enterprise           & Profit             \\
+				\hline
+			\end{tabular}
+		\end{tablehere}
+	\end{center}
+
+	There can also be other types of economic incentives such as tax rebates on investments or larger market control.
+
+	\subsection{Utility}
+	When making an economic choice, consumers seek to maximise satisfaction while firms aim to maximise profits. Each economic agent has their own definition for utility. For example, consumers satisfaction can be measured from the value that consuming a product provides them.
+
+	\subsubsection{Total and Marginal Utility}
+	Total utility is the sum of the satisfaction from the consumption of all units of goods and services. Marginal utility measures the change of satisfaction from the consumption additional units of goods and services.
+
+	\subsubsection{Diminishing Marginal Utility}
+	The utility gained from consuming an additional unit of goods or services decreases. This means that marginal utility always approaches the value zero. For example, for the ordinary consumer, a single smartphone is enough to satisfy. Therefore, the utility of a second smartphone is zero.
+
+	\begin{center}
+		\begin{figurehere}
+			\begin{tikzpicture}
+				\begin{axis}[
+						axis lines = left,
+						xlabel = Quantity,
+						ylabel = Utility,
+						ymin = 0,
+						ymax = 1,
+						xmin = 0,
+						xmax = 10,
+					]
+
+					\addplot [
+						domain=0:10,
+						samples=100,
+						color=red,
+						very thick
+					]
+					{((x + 1)^(1 - 1.75) - 1)/(1 - 1.85)};
+
+				\end{axis}
+			\end{tikzpicture}
+			\caption{Total Utility of an Arbitrary Product}
+		\end{figurehere}
+		\vspace*{16pt}
+		\begin{figurehere}
+			\begin{tikzpicture}
+				\begin{axis}[
+						axis lines = left,
+						xlabel = Quantity,
+						ylabel = Marginal Utility,
+						ymin = 0,
+						ymax = 0.55,
+						xmin = 0,
+						xmax = 10,
+					]
+
+					\addplot [
+						domain=0:10,
+						samples=100,
+						color=red,
+						very thick
+					]
+					{-0.0477 * x + 0.477};
+
+				\end{axis}
+			\end{tikzpicture}
+			\caption{Marginal Utility of an Arbitrary Product}
+		\end{figurehere}
+	\end{center}
+
+	\subsection{Utility Maximisation}
+	Economic agents are always assumed to act in self-interest within neoclassical economic theory. Economic agents are rational entities that always act in their own self-interest. Typically, consumers aim for to maximise satisfaction and producers aim to maximise profits.
+	\medskip
+
+	It is important to note that in more modern economic theories, economic agents can have other motives other than self-interest such as philanthropic and altruistic goals, i.e. in the maximise the utility and satisfaction of others.
+
+
+	\subsection{The Importance of the Margin}
+	Making an economic decision at the margin is important as it lays out the cost and effect of additional resources being allocated. The margin provides a way to extrapolate information from a gathered set of data and allows for optimal allocation of economic resources.
+
+	\section{Imperfect Information}
+	\subsection{The Importance of Information}
+	Information is important during decision making as it can provide an avenue for consumers and producers to optimally allocate resources in order to maximise utility.
+
+	\subsubsection{Symmetric Information}
+	Symmetric information refers to a situation where all economic agents having access to the same information regarding a transaction. Symmetric information promotes optimal allocation of resources as economic agents are able to make informed decisions.
+
+	\subsubsection{Asymmetric Information}
+	Asymmetric information occurs when a set of economic agents holds more information about a transaction than other economics agents, e.g. firms holding non-public material information regarding its business processes.
+
+	\subsubsection{Imperfect Information}
+	Imperfect information refers to incomplete information regarding transactions and events that is occurring within an economy. This means non-first parties to the transactions are not able to optimally allocate resources, causing inefficiencies.
+
+	\subsection{The Significance of Asymmetric Information}
+	Asymmetric information poses an issue as it can lead to mass misallocation of economic resources. Suboptimal allocation of resources can lead to market failures where the forces of supply and demand is obfuscated and an equilibrium being unable to be determined.
+
+	\subsubsection{The Principal–Agent Problem}
+	The principal-agent problem is an example of how asymmetric information can lead to misallocation of resources. The principal, a shareholder, delegates tasks to an agent, a manager, of an enterprise. The agent acts in self-interest but also have a duty of acting in the best interest of the principal. This is to the detriment of the principal as they do not have the perfect information, i.e. asymmetric information.
+
+	\section{Aspects of Behavioural Economic Theory}
+	\subsection{Bounded Rationality}
+	Bounded rationality is a behavioural economic theory concept where individuals are limited by arbitrary factors when making decisions. This leads to a decision that satisfice (satisfactory + suffice) rather than optimise. Some of the limitations can be:
+	\begin{itemize}
+		\item[---] cognitive capacity
+		\item[---] time limitations
+		\item[---] knowledge limitations
+	\end{itemize}
+	\medskip
+
+	The bounded rationality model assumes that:
+	\begin{itemize}
+		\item[---] the satisficing choice is selected with some consideration of the alternatives
+		\item[---] the world is perceived as simple
+		\item[---] not all alternatives are explored and considered
+		\item[---] heuristic methods could be employed
+	\end{itemize}
+	\subsubsection{Bounded Self-Control}
+	Bounded self-control is an extension to bounded rationality where individuals sometimes are not able to exercise self-control due to limitations. This causes some decisions neither be satisficing nor optimal.
+	\medskip
+
+	For example, some individuals are unable to exercise self-control over themselves when gambling or drinking. These behaviours are detrimental and suboptimal.
+
+	\subsection{Biases in Decision Making}
+	In neoclassical theory, the rational, self-interested and rationally unbounded individuals are often called Homo economicus, the economic man. In behavioural economic theory, homo economicus rarely exists as individuals are inherently irrational and affected by cognitive biases.
+
+	\subsubsection{Heuristics}
+	Limitations leads to the developments of heuristics which are tools that helps individuals come to a satisficing decision. Heuristics can be categorised as 'shortcuts' when it come to decision making as it requires relatively small cognitive capacity, knowledge and time. Heuristics helps avoid unsatisfactory decisions. Examples of heuristics includes:
+	\begin{itemize}
+		\item[---] rule of thumb
+		\item[---] anchoring
+		\item[---] availability
+		\item[---] social norms
+	\end{itemize}
+
+	\subsubsection{Anchoring}
+	Anchoring is a phenomenon where individuals often places greater value to an initial piece of information. This leads to the initial information being a reference point for predictions. For example,
+	\begin{center}
+		\begin{minipage}{0.75\linewidth}
+			"the Earth takes 365 days to revolve around the sun, how long does Mars take?"
+		\end{minipage}
+	\end{center}
+	The question phrases "the Earth takes 365 days to revolve around the sun" as an anchoring piece of information. Subsequent guesses will be largely based on the reference point.
+
+	\subsubsection{Availability}
+	Availability relies on newer information being perceived as more important than older pieces of information. Newer pieces of information is seen as more valuable as it is easier to recall newer information in its entirety compared to older ones.
+	\medskip
+
+	For example, media coverage of an aircraft accident is more readily recalled compared to a relatively commonplace events such as car accidents.
+
+	\subsubsection{Social Norms}
+	Social norms are a set of rules that are commonplace in a society. Social norms are employed to overcome individuals limitations. Social norms occurs due to the negative consequences of deviating from it.
+	\medskip
+
+	For example, queueing in a line is a social norm as cutting a queue will result in negative consequences.
+
+	\subsection{The Importance of Altruism}
+	Altruism is the characteristic where the primary concern is in the interest of others instead of the self. Altruism is often done in order to avoid negative consequences of optimal allocation of resources. For example, altruistic firms might put more individuals in employment in order to cut back on unemployment.
+
+	\subsection{The Perception of Fairness}
+	Fairness is the equitable outcome for all parties involved in a transaction. No single party is better off or worse off from a choice made by the first parties.
+
+	\subsubsection{Inequity Aversion}
+	Inequity aversion is the concept where a party would prefer loss over an inequitable transaction. The malign party prefers to gain nothing over being unfairly or unjustly treated in a transaction with an opposing party.
+	\medskip
+
+	For example, splitting costs 50\% each is fair; but splitting cost 10\% for a party and 90\% for another is unfair. The unfairly treated would prefer losing out.
+
+	\section{Behavioural Economics and Economic Policy}
+	\subsection{Nudge Theory}
+	Nudge theory lays out methods of influencing decision making in behavioural economics. Nudge theory alters individuals' decision making in a predictable manner without prohibiting freedom of choice.
+
+	\subsubsection{Choice Architecture}
+	Choice architecture is the way that choices are presented to consumers. Choice architecture encourages a more satisficing decision. Choice architecture can count as a nudge as it encourages preferable choices but does not limit the individual from other choices.
+	\medskip
+
+	For example, employers encouraging pension schemes over bigger cash compensation.
+
+	\subsubsection{Framing}
+	Framing provides a limited context for an individual. Often, framing is used in order to increase the use of heuristics to make a satisficing decision.
+	\medskip
+
+	For example, monthly repayments with interest appears more appealing than a lump sum payment.
+
+	\subsubsection{Nudges}
+	Nudges are any method employed that changes individuals' behaviour during decision making in order to influence a desirable choice. Nudges must not restrict freedom of choice of the individuals.
+
+	\subsection{Choices}
+	\subsubsection{Default Choice}
+	Default choice are automatic inclusion of consumers into a system unless with explicit opt-in or opt-out. Default choices require no input from the decision maker except in the cases where the opposite is desired.
+	\medskip
+
+	For example, on most websites, storing cookies is the default choice unless the consumer wishes otherwise.
+
+	\subsubsection{Restricted Choice}
+	Restricted choice limits the volume of choices available to individuals in order to promote a satisficing decisions.
+	\medskip
+
+	For example, alcohols in locked lockers at a grocery store might promote the consumption of juices.
+
+	\subsubsection{Mandated Choice}
+	Mandated choice is a method where individuals must make a decision ahead of time whether they are willing to partake in a particular action.
+	\medskip
+
+	For example, in the UK, individuals applying for or renewing their driving license must make a decision on whether they wish to donate their organs.
+\end{multicols*}
+\end{document}
